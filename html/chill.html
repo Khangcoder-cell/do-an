@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhạc Chill - Phúc Khang Music</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2>Phúc Khang Music</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Trang chủ</a></li>
+                <li><a href="khampha.html" style="color: white; font-weight: bold;">Khám Phá</a></li>
+                <li><a href="#">Nhạc hay</a></li>
+                <li><a href="#">Nghệ Sĩ</a></li>
+                <li><a href="#">Cộng Đồng</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+        </div>
+    </header>
+
+    <main>
+        <section class="playlist-detail-section">
+            <div class="playlist-container">
+                
+                <div class="playlist-sidebar">
+                    <img src="../imagesanh/chill.jpg" alt="Chill Bìa">
+                    <h2>Góc Nhạc Chill</h2>
+                    <p>Cập nhật: Hôm nay</p>
+                    
+                    <button class="play-all-btn">▶ PHÁT TẤT CẢ</button>
+                </div>
+
+                <div class="playlist-songs">
+                    
+                    <div class="song-row" onclick="playMusic('Dự Báo Thời Tiết Hôm Nay Mưa', 'Grey D', '../imageschill/dubaothoitiet.jpg', '../imageschill/dự báo thời tiết hôm nay mưa.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">1</span>
+                            <img src="../imageschill/dubaothoitiet.jpg" alt="Dự Báo Thời Tiết Hôm Nay Mưa">
+                            <div class="song-title">
+                                <h4>Dự Báo Thời Tiết Hôm Nay Mưa</h4>
+                                <p>Grey D</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc Chill</div>
+                        <div class="song-time">04:15</div>
+                    </div>
+
+                    <div class="song-row" onclick="playMusic('Giữ Anh Cho Ngày Hôm Qua', 'Hoàng Dũng', '../imageschill/giuchoanh.jpg', '../imageschill/Giữ Anh Cho Ngày Hôm Qua.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">2</span>
+                            <img src="../imageschill/giuchoanh.jpg" alt="Giữ Anh Cho Ngày Hôm Qua">
+                            <div class="song-title">
+                                <h4>Giữ Anh Cho Ngày Hôm Qua</h4>
+                                <p>Hoàng Dũng</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc Chill</div>
+                        <div class="song-time">03:50</div>
+                    </div>
+
+                    <div class="song-row" onclick="playMusic('Kho Báu', '(S)Trong', '../imageschill/khobau.jpg', '../imageschill/Kho Báu.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">3</span>
+                            <img src="../imageschill/khobau.jpg" alt="Kho Báu">
+                            <div class="song-title">
+                                <h4>Kho Báu</h4>
+                                <p>(S)Trong</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc Chill</div>
+                        <div class="song-time">04:10</div>
+                    </div>
+
+                    <div class="song-row" onclick="playMusic('Mùa Mưa Ấy', 'Vũ', '../imageschill/muamuaay.jpg', '../imageschill/Mùa Mưa Ấy.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">4</span>
+                            <img src="../imageschill/muamuaay.jpg" alt="Mùa Mưa Ấy">
+                            <div class="song-title">
+                                <h4>Mùa Mưa Ấy</h4>
+                                <p>VŨ</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc Chill</div>
+                        <div class="song-time">03:45</div>
+                    </div>
+
+                    <div class="song-row" onclick="playMusic('Qua Khung Cửa Sổ', 'Chillies', '../imageschill/quakhungcuaso.jpg', '../imageschill/Qua Khung Cửa Sổ.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">5</span>
+                            <img src="../imageschill/quakhungcuaso.jpg" alt="Qua Khung Cửa Sổ">
+                            <div class="song-title">
+                                <h4>Qua Khung Cửa Sổ</h4>
+                                <p>Chillies</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc Chill</div>
+                        <div class="song-time">04:20</div>
+                    </div>
+
+                    <div class="song-row" onclick="playMusic('Sẽ Quên Em Nhanh Thôi', 'Soobin', '../imageschill/sequenemnhanhthoi.jpg', '../imageschill/Sẽ Quên Em Nhanh Thôi.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">6</span>
+                            <img src="../imageschill/sequenemnhanhthoi.jpg" alt="Sẽ Quên Em Nhanh Thôi">
+                            <div class="song-title">
+                                <h4>Sẽ Quên Em Nhanh Thôi</h4>
+                                <p>Soobin</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc Chill</div>
+                        <div class="song-time">03:30</div>
+                    </div>
+
+                    <div class="song-row" onclick="playMusic('Vài Câu Nói Có Khiến Người Thay Đổi', 'Grey D', '../imageschill/vaicaunoicokhiennguoithaydoi.jpg', '../imageschill/vaicaunoicokhiennguoithaydoi.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">7</span>
+                            <img src="../imageschill/vaicaunoicokhiennguoithaydoi.jpg" alt="Vài Câu Nói Có Khiến Người Thay Đổi">
+                            <div class="song-title">
+                                <h4>Vài Câu Nói Có Khiến...</h4>
+                                <p>Grey D</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc Chill</div>
+                        <div class="song-time">04:05</div>
+                    </div>
+                    <div class="song-row" onclick="playMusic('Vạn Vật Như Muốn Ta Bên Nhau', 'Rio', '../imageschill/vanvatmuontabennhau.jpg', '../imageschill/vạn vật như muốn ta bên nhau.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">8</span>
+                            <img src="../imageschill/vanvatmuontabennhau.jpg" alt="Vạn Vật Như Muốn Ta Bên Nhau">
+                            <div class="song-title">
+                                <h4>Vạn Vật Như Muốn...</h4>
+                                <p>Rio</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc Chill</div>
+                        <div class="song-time">04:10</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Phúc Khang Music. Học phần Nhập môn Web.</p>
+    </footer>
+
+    <div id="player-bar" class="player-bar">
+        <div class="player-info">
+            <img id="player-img" src="" alt="Song Cover">
+            <div class="song-details">
+                <span class="now-playing">NOW PLAYING:</span>
+                <h4 id="player-title">Tên bài hát</h4>
+                <p id="player-artist">Tên ca sĩ</p>
+            </div>
+        </div>
+        <div class="player-controls">
+            <button class="control-btn" onclick="nextOrPrev('prev')">⏮</button>
+            <button id="play-pause-btn" onclick="togglePlay()">⏸</button>
+            <button class="control-btn" onclick="nextOrPrev('next')">⏭</button>
+        </div>
+        <div class="player-volume">
+            <span>🔊</span>
+            <input type="range" min="0" max="100" value="50">
+        </div>
+    </div>
+
+    <audio id="myAudio"></audio>
+    
+    <script src="../java.js"></script>
+</body>
+</html>

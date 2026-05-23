@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhạc Trending - Phúc Khang Music</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2>Phúc Khang Music</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Trang chủ</a></li>
+                <li><a href="khampha.html" style="color: white; font-weight: bold;">Khám Phá</a></li>
+                <li><a href="#">Nhạc hay</a></li>
+                <li><a href="#">Nghệ Sĩ</a></li>
+                <li><a href="#">Cộng Đồng</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+        </div>
+    </header>
+
+    <main>
+        <section class="playlist-detail-section">
+            <div class="playlist-container">
+                
+                <div class="playlist-sidebar">
+                    <img src="../imagesanh/trending.jpg" alt="Trending Bìa">
+                    <h2>Nhạc Trending</h2>
+                    <p>Cập nhật: Hôm nay</p>
+                
+                    <button class="play-all-btn">▶ PHÁT TẤT CẢ</button>
+                </div>
+
+                <div class="playlist-songs">
+                    
+                    <div class="song-row" onclick="playMusic('Bên Ấy Em Có Ai Rồi', 'Châu Khải Phong', '../imagestrending/benayemcoairoi.jpg', '../imagestrending/Bên Ấy Em Có Ai Rồi.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">1</span>
+                            <img src="../imagestrending/benayemcoairoi.jpg" alt="Bên Ấy Em Có Ai Rồi">
+                            <div class="song-title">
+                                <h4>Bên Ấy Em Có Ai Rồi</h4>
+                                <p>Châu Khải Phong</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc Trending</div>
+                        <div class="song-time">04:15</div>
+                    </div>
+
+                    <div class="song-row" onclick="playMusic('Đớn Đau Vô Cùng', 'DatKaa', '../imagestrending/dondauvocung.jpg', '../imagestrending/Đớn Đau Vô Cùng.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">2</span>
+                            <img src="../imagestrending/dondauvocung.jpg" alt="Đớn Đau Vô Cùng">
+                            <div class="song-title">
+                                <h4>Đớn Đau Vô Cùng</h4>
+                                <p>DatKaa</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc Trending</div>
+                        <div class="song-time">05:12</div>
+                    </div>
+
+                    <div class="song-row" onclick="playMusic('Không Buông', 'Ari, Hngle', '../imagestrending/khongbuong.jpg', '../imagestrending/Không Buông.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">3</span>
+                            <img src="../imagestrending/khongbuong.jpg" alt="Không Buông">
+                            <div class="song-title">
+                                <h4>Không Buông</h4>
+                                <p>Ari, Hngle</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc Trending</div>
+                        <div class="song-time">04:30</div>
+                    </div>
+
+                    <div class="song-row" onclick="playMusic('Ngày Rời Chuyến Bay', 'Lê Minh Huy', '../imagestrending/ngayroichuyenbay.jpg', '../imagestrending/Ngày Rời Chuyến Bay.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">4</span>
+                            <img src="../imagestrending/ngayroi.jpg" alt="Ngày Rời Chuyến Bay">
+                            <div class="song-title">
+                                <h4>Ngày Rời Chuyến Bay</h4>
+                                <p>Lê Minh Huy</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc Trending</div>
+                        <div class="song-time">03:45</div>
+                    </div>
+
+                    <div class="song-row" onclick="playMusic('Người Im Lặng Gặp Người Hay Nói', 'Osad', '../imagestrending/nguoiimlanggapnguoihaynoi.jpg', '../imagestrending/Người Im Lặng Gặp Người Hay Nói.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">5</span>
+                            <img src="../imagestrending/nguoiimlanggapnguoihaynoi.jpg" alt="Người Im Lặng">
+                            <div class="song-title">
+                                <h4>Người Im Lặng Gặp Người Hay Nói</h4>
+                                <p>Hiếu Thứ Hai</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc Trending</div>
+                        <div class="song-time">03:20</div>
+                    </div>
+
+                    <div class="song-row" onclick="playMusic('Nơi Này Có Anh', 'Sơn Tùng M-TP', '../imagestrending/noinaycoanh.jpg', '../imagestrending/Nơi Này Có Anh.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">6</span>
+                            <img src="../imagestrending/noinaycoanh.jpg" alt="Nơi Này Có Anh">
+                            <div class="song-title">
+                                <h4>Nơi Này Có Anh</h4>
+                                <p>Sơn Tùng M-TP</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc Trending</div>
+                        <div class="song-time">04:20</div>
+                    </div>
+
+                    <div class="song-row" onclick="playMusic('Trạng Thái Mộng Mơ', 'Đỗ Hoàng Long', '../imagestrending/trangthaimongmo.jpg', '../imagestrending/Trạng Thái Mộng Mơ.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">7</span>
+                            <img src="../imagestrending/trangthaimongmo.jpg" alt="Trạng Thái Mộng Mơ">
+                            <div class="song-title">
+                                <h4>Trạng Thái Mộng Mơ</h4>
+                                <p>Đỗ Hoàng Long</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc Trending</div>
+                        <div class="song-time">03:55</div>
+                    </div>
+
+                    <div class="song-row" onclick="playMusic('Tuyển Bạn Gái', 'OgeNus', '../imagestrending/tuyenbangai.jpg', '../imagestrending/Tuyển Bạn Gái.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">8</span>
+                            <img src="../imagestrending/tuyenbangai.jpg" alt="Tuyển Bạn Gái">
+                            <div class="song-title">
+                                <h4>Tuyển Bạn Gái</h4>
+                                <p>OgeNus</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc Trending</div>
+                        <div class="song-time">03:10</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Phúc Khang Music. Học phần Nhập môn Web.</p>
+    </footer>
+
+    <div id="player-bar" class="player-bar">
+        <div class="player-info">
+            <img id="player-img" src="" alt="Song Cover">
+            <div class="song-details">
+                <span class="now-playing">NOW PLAYING:</span>
+                <h4 id="player-title">Tên bài hát</h4>
+                <p id="player-artist">Tên ca sĩ</p>
+            </div>
+        </div>
+        <div class="player-controls">
+            <button class="control-btn" onclick="nextOrPrev('prev')">⏮</button>
+            <button id="play-pause-btn" onclick="togglePlay()">⏸</button>
+            <button class="control-btn" onclick="nextOrPrev('next')">⏭</button>
+        </div>
+        <div class="player-volume">
+            <span>🔊</span>
+            <input type="range" min="0" max="100" value="50">
+        </div>
+    </div>
+
+    <audio id="myAudio"></audio>
+    
+    <script src="../java.js"></script>
+</body>
+</html>

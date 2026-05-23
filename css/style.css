@@ -1,0 +1,596 @@
+/* Reset CSS cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #212521; /* Màu nền tối hơi ngả xanh rêu giống ảnh */
+    color: #ffffff;
+}
+
+/* --- Header / Navbar --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #1a1d1a;
+}
+
+header .logo h2 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: #b0b5b0;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+.search-box input {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: #333833;
+    color: white;
+    outline: none;
+}
+
+/* --- Hero Banner --- */
+.hero {
+   height: 400px;
+    background-color: #3a403a; 
+    background-size: cover;
+    
+    /* SỬA DÒNG NÀY: Đổi 'center' thành 'center bottom' */
+    background-position: center bottom; 
+    
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+/* --- Chỉnh chung cho các Section --- */
+.music-section {
+    padding: 40px 50px;
+}
+
+.music-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #d1d5d1;
+}
+
+/* --- Grid Bài hát --- */
+.grid-container {
+    display: grid;
+    /* Tự động chia cột đều nhau, mỗi thẻ tối thiểu 180px */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.music-card {
+    background-color: #2a2e2a;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.music-card:hover {
+    transform: translateY(-5px); /* Hiệu ứng nảy lên khi di chuột */
+    background-color: #333833;
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1; /* Giữ ảnh hình vuông */
+    background-color: #444; /* Màu nền chờ ảnh */
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Nút Play ẩn/hiện */
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.music-card:hover .play-btn {
+    opacity: 1; /* Hiện nút Play khi hover */
+}
+
+.music-card h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.music-card p {
+    font-size: 0.85rem;
+    color: #a0a0a0;
+}
+
+/* --- Grid Nghệ sĩ (Hình tròn) --- */
+.artist-container {
+    display: flex;
+    gap: 40px;
+}
+
+.artist-card {
+    text-align: center;
+}
+
+.artist-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #555;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #333;
+    margin-top: 20px;
+    color: #888;
+}
+/* --- THANH PHÁT NHẠC (PLAYER BAR) --- */
+.player-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #181818; /* Màu nền tối giống Spotify */
+    border-top: 1px solid #282828;
+    display: none; /* Mặc định ẩn, JS sẽ đổi thành flex khi phát nhạc */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    z-index: 1000;
+}
+
+.player-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 30%;
+}
+
+.player-info img {
+    width: 55px;
+    height: 55px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.song-details .now-playing {
+    font-size: 0.7rem;
+    color: #1db954; /* Màu xanh lá cho chữ NOW PLAYING */
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.song-details h4 {
+    margin: 3px 0;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.song-details p {
+    font-size: 0.8rem;
+    color: #b3b3b3;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.player-controls button {
+    background: none;
+    border: none;
+    color: #b3b3b3;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.player-controls button:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Format riêng nút Play/Pause hình tròn */
+#play-pause-btn {
+    background-color: white;
+    color: black;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+#play-pause-btn:hover {
+    transform: scale(1.05);
+}
+
+.player-volume {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Đẩy nội dung trang lên một chút để không bị thanh nhạc che mất Footer */
+body {
+    padding-bottom: 80px; 
+}
+/* --- PHẦN CAROUSEL CUỘN NGANG --- */
+.carousel-wrapper {
+    position: relative; 
+    display: flex;
+    align-items: center;
+}
+
+/* Lớp chứa các thẻ bài hát */
+.slider-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; 
+    scroll-behavior: smooth; 
+    padding: 10px 0;
+    width: 100%;
+}
+
+/* Ẩn thanh cuộn mặc định của trình duyệt */
+.slider-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Đảm bảo các thẻ card không bị bóp méo khi nằm ngang */
+.music-card {
+    min-width: 200px; /* Chiều rộng tối thiểu của mỗi thẻ */
+    flex-shrink: 0; /* Không cho phép thẻ tự thu nhỏ */
+}
+
+/* --- THIẾT KẾ 2 NÚT MŨI TÊN --- */
+.nav-btn {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5); 
+}
+
+.prev-btn { left: -15px; }
+.next-btn { right: -15px; }
+/* =========================================
+   PHẦN CAROUSEL CUỘN NGANG (GIỐNG HÌNH)
+========================================= */
+.carousel-wrapper {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Lớp chứa các thẻ bài hát */
+.slider-container {
+    display: flex;
+    gap: 20px; /* Khoảng cách giữa các thẻ */
+    overflow-x: auto; 
+    scroll-behavior: smooth; 
+    padding: 10px 0;
+    width: 100%;
+}
+
+/* Ẩn thanh cuộn mặc định của trình duyệt cho đẹp */
+.slider-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* --- THIẾT KẾ THẺ BÀI HÁT (HIỂN THỊ ĐÚNG 4 THẺ) --- */
+.music-card {
+    /* Ép kích thước: 100% chia 4 thẻ, trừ đi khoảng trống gap */
+    flex: 0 0 calc((100% - 60px) / 4); 
+    background-color: #2a2e2a; /* Màu nền xám đen */
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.music-card:hover {
+    background-color: #333833;
+}
+
+/* --- PHẦN HÌNH ẢNH TRONG THẺ (ÉP VUÔNG 100%) --- */
+.card-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Ép khung ảnh luôn là hình vuông */
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cắt ảnh vừa khung, không bị méo hình */
+}
+
+.music-card h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: white;
+    white-space: nowrap; /* Tránh rớt dòng nếu tên bài quá dài */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Thêm dấu ... nếu tên dài */
+}
+
+.music-card p {
+    font-size: 0.85rem;
+    color: #a0a0a0;
+}
+
+/* --- NÚT MŨI TÊN (ĐẨY RA 2 BÊN RÌA) --- */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.8); /* Màu trắng đục dễ nhìn */
+    color: black;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+}
+/* =========================================
+   GIAO DIỆN TRANG CHI TIẾT PLAYLIST
+========================================= */
+.playlist-detail-section {
+    padding: 40px 50px;
+}
+
+.playlist-container {
+    display: flex;
+    gap: 40px; /* Khoảng cách giữa cột ảnh bìa và cột danh sách */
+}
+
+/* --- CỘT TRÁI: THÔNG TIN --- */
+.playlist-sidebar {
+    width: 300px; /* Độ rộng cố định cho cột trái */
+    text-align: center;
+}
+
+.playlist-sidebar img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6); /* Đổ bóng cho ảnh bìa nổ bật */
+    margin-bottom: 20px;
+}
+
+.playlist-sidebar h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.playlist-sidebar p {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+/* Nút phát tất cả */
+.play-all-btn {
+    background-color: #9b4de0; /* Màu tím đặc trưng */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.play-all-btn:hover {
+    background-color: #b062f5;
+    transform: scale(1.05);
+}
+
+/* --- CỘT PHẢI: DANH SÁCH BÀI HÁT --- */
+.playlist-songs {
+    flex: 1; /* Chiếm toàn bộ phần không gian còn lại bên phải */
+}
+
+/* Từng dòng bài hát */
+.song-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid #333; /* Đường kẻ ngang phân cách */
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 5px;
+}
+
+.song-row:hover {
+    background-color: #2a2e2a; /* Sáng lên khi di chuột vào */
+}
+
+/* Cụm thông tin Tên bài hát (Nằm bên trái dòng) */
+.song-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 50%; /* Chiếm một nửa chiều dài dòng */
+}
+
+.song-index {
+    color: #a0a0a0;
+    font-weight: bold;
+    width: 25px;
+    text-align: center;
+}
+
+.song-left img {
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.song-title h4 {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 3px;
+}
+
+.song-title p {
+    font-size: 0.8rem;
+    color: #a0a0a0;
+}
+
+/* Cụm Album và Thời gian (Nằm bên phải dòng) */
+.song-album {
+    width: 30%;
+    color: #a0a0a0;
+    font-size: 0.9rem;
+}
+
+.song-time {
+    width: 10%;
+    text-align: right;
+    color: #a0a0a0;
+    font-size: 0.9rem;
+}
+/* =========================================
+   TỐI ƯU CHO ĐIỆN THOẠI & TABLET (RESPONSIVE)
+========================================= */
+
+/* Chỉ kích hoạt khi chiều rộng màn hình nhỏ hơn 768px */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Xếp chồng các cột ngang thành cột dọc */
+    .content-split {
+        flex-direction: column; /* Đang nằm ngang (row) sẽ bị bẻ thành dọc (column) */
+    }
+
+    /* 2. Ép 4 ô thống kê (Stats Grid) từ 4 cột thành 2 cột cho đỡ chật */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    /* 3. Xử lý thanh Sidebar (Menu trái) */
+    .sidebar {
+        position: absolute; /* Rút nó ra khỏi bố cục chính */
+        z-index: 100; /* Nổi lên trên cùng */
+        height: 100%;
+        left: -250px; /* Giấu nó sang hẳn mép trái màn hình */
+        transition: left 0.3s ease; /* Hiệu ứng trượt ra mượt mà */
+        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    }
+
+    
+    /* Khi Sidebar có thêm class 'show' (thông qua JS) thì kéo nó ra lại */
+    .sidebar.show {
+        left: 0;
+    }
+
+    /* 4. Giảm khoảng trống (padding) hai bên mép điện thoại */
+    .main-content {
+        padding: 0 15px 20px 15px; 
+    }
+
+    /* 5. Căn chỉnh lại Header */
+    .page-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Kích hoạt thêm cho điện thoại rất nhỏ (nhỏ hơn 480px) */
+@media screen and (max-width: 480px) {
+    /* Ép 4 ô thống kê thành 1 cột dọc duy nhất luôn */
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-header h1 {
+        font-size: 24px; /* Chữ nhỏ lại xíu */
+    }
+}
+
+.prev-btn { left: -15px; } /* Đẩy mũi tên trái lòi ra ngoài một chút */
+.next-btn { right: -15px; } /* Đẩy mũi tên phải lòi ra ngoài một chút */

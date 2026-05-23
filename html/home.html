@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phúc Khang Music - Chill</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Thanh điều hướng -->
+    <header>
+        <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+
+        <div class="logo">
+            <h2>Phúc Khang Music</h2>
+        </div>
+        
+        <nav id="sidebar">
+            <ul>
+                <li><a href="home.html">Trang chủ</a></li>
+                <li><a href="khampha.html">Khám Phá </a></li>
+                <li><a href="#">Nhạc hay</a></li>
+                <li><a href="#">Nghệ Sĩ </a></li>
+                <li><a href="#">Cộng Đồng</a></li>
+                <li><a href="lab.html">Lab Bài Tập</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+        </div>
+    </header>
+
+    <main>
+        <!-- Phần Banner chính -->
+        <section class="hero" style="background-image: url('../images/anhnen.jpg');">
+            <div class="hero-content">
+                <h1>THẢ HỒN THEO NHẠC<br>TÌM LẠI BÌNH YÊN.</h1>
+            </div>
+        </section>
+
+        <!-- Danh sách bài hát mới (Đã thêm nút mũi tên cuộn ngang) -->
+        <section class="music-section">
+            <h2>NHẠC CHILL | THỊNH HÀNH</h2>
+            
+            <!-- Bao bọc Slider và 2 nút mũi tên -->
+            <div class="carousel-wrapper">
+                
+                <!-- Nút trượt trái -->
+                <button class="nav-btn prev-btn" onclick="scrollSlider('left')">❮</button>
+                
+                <!-- Khung chứa danh sách bài hát -->
+                <div class="slider-container" id="mySlider">
+                    <!-- Card Bài hát 1 -->
+                    <div class="music-card" onclick="playMusic('Vì Anh Đâu Có Biết', 'Madihu, Vũ.', '../images/vianh.jpg', '../images/Vì Anh Đâu Có Biết.mp3')">
+                        <div class="card-image">
+                            <img src="../images/vianh.jpg" alt="Vì Anh Đâu Có Biết">
+                            <div class="play-btn">▶</div>
+                        </div>
+                        <h3>Vì Anh Đâu Có Biết</h3>
+                        <p>Madihu, Vũ.</p>
+                    </div>
+
+                    <!-- Card Bài hát 2 -->
+                    <div class="music-card" onclick="playMusic('Phép Màu','Đàn Cá Gỗ OST','../images/phepmau.jpg','../images/Phép Màu.mp3')">
+                        <div class="card-image">
+                            <img src="../images/phepmau.jpg" alt="Phép Màu">
+                            <div class="play-btn">▶</div>
+                        </div>
+                        <h3>Phép Màu</h3>
+                        <p>Đàn Cá Gỗ OST</p>
+                    </div>
+
+                    <!-- Card Bài hát 3 -->
+                    <div class="music-card" onclick="playMusic('Không Buông',' Ari, Hngle','../images/khongbuong.jpg','../images/Không Buông.mp3')">
+                        <div class="card-image">
+                            <img src="../images/khongbuong.jpg" alt=" Ari, Hngle">
+                            <div class="play-btn">▶</div>
+                        </div>
+                        <h3>Không Buông</h3>
+                        <p> Ari, Hngle</p>
+                    </div>
+                    
+                    <!-- Card Bài hát 4 -->
+                    <div class="music-card" onclick="playMusic('Yêu em như...','Grey D, Ánh Sáng','../images/yeuemnhu.jpg','../images/yêu em như.mp3')">
+                        <div class="card-image">
+                            <img src="../images/yeuemnhu.jpg" alt="Yêu em như...">
+                            <div class="play-btn">▶</div>
+                        </div>
+                        <h3>Yêu em như... </h3>
+                        <p>Grey D, Ánh Sáng</p>
+                    </div>
+                    
+                    <!-- Card Bài hát 5 (Copy ra để danh sách dài hơn, test nút cuộn) -->
+                    <div class="music-card" onclick="playMusic('Tấm Lòng Cửu Long', 'Ricky Star.', '../images/tamlongcuulong.jpg', '../images/Tấm Lòng Cửu Long.mp3')">
+                        <div class="card-image">
+                            <img src="../images/tamlongcuulong.jpg" alt="Tấm Lòng Cửu Long">
+                            <div class="play-btn">▶</div>
+                        </div>
+                        <h3>Tấm Lòng Cửu Long</h3>
+                        <p>Ricky Star</p>
+                    </div>
+                </div>
+
+                <!-- Nút trượt phải -->
+                <button class="nav-btn next-btn" onclick="scrollSlider('right')">❯</button>
+
+            </div>
+        </section>
+
+        <!-- Nghệ sĩ yêu thích -->
+        <section class="music-section">
+            <h2>CA SĨ ĐƯỢC YÊU THÍCH</h2>
+            <div class="artist-container">
+                <div class="artist-card">
+                    <img src="../images/j97.jpg" alt="Jack-97" class="artist-img">
+                    <p>Jack-97</p>
+                </div>
+                <div class="artist-card">
+                    <img src="../images/sontung.jpg" alt="Sơn Tùng MTP" class="artist-img">
+                    <p>Sơn Tùng MTP</p>
+                </div>
+                <div class="artist-card">
+                    <img src="../images/hth.jpeg" alt="Hiếu Thứ Hai" class="artist-img">
+                    <p>Hiếu Thứ Hai</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chân trang -->
+    <footer>
+        <p> 2026 Phúc Khang Music. Học phần Nhập môn Web.</p>
+    </footer>
+
+    <!-- Giao diện thanh phát nhạc (Player Bar) -->
+    <div id="player-bar" class="player-bar">
+        <!-- Bên trái: Hình ảnh và Tên bài hát -->
+        <div class="player-info">
+            <img id="player-img" src="" alt="Song Cover">
+            <div class="song-details">
+                <span class="now-playing">NOW PLAYING:</span>
+                <h4 id="player-title">Tên bài hát</h4>
+                <p id="player-artist">Tên ca sĩ</p>
+            </div>
+        </div>
+
+        <!-- Ở giữa: Các nút điều khiển -->
+        <div class="player-controls">
+            <button class="control-btn" onclick="nextOrPrev('prev')">⏮</button>
+            <button id="play-pause-btn" onclick="togglePlay()">⏸</button>
+            <button class="control-btn" onclick="nextOrPrev('next')">⏭</button>
+        </div>
+
+        <!-- Bên phải: Giả lập thanh âm lượng cho giống thật -->
+        <div class="player-volume">
+            <span>🔊</span>
+            <input type="range" min="0" max="100" value="50">
+        </div>
+    </div>
+
+    <!-- THẺ AUDIO DUY NHẤT ĐỂ PHÁT NHẠC (Đã xóa các thẻ trùng lặp) -->
+    <audio id="myAudio"></audio>
+
+    <!-- Kết nối file JS -->
+    <script src="../java.js"></script>
+</body>
+</html>

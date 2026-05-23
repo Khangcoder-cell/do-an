@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Playlist - Phúc Khang Music</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2>Phúc Khang Music</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Trang chủ</a></li>
+                <li><a href="khampha.html" style="color: white; font-weight: bold;">Khám Phá </a></li>
+                <li><a href="#">Nhạc hay</a></li>
+                <li><a href="#">Nghệ Sĩ </a></li>
+                <li><a href="#">Cộng Đồng</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+        </div>
+    </header>
+
+    <main>
+        <section class="playlist-detail-section">
+            <div class="playlist-container">
+                
+                <div class="playlist-sidebar">
+                    <img src="../imagesanh/pop.jpg" alt="Pop Bìa">
+                    <h2>US-UK Hits</h2>
+                    <p>Cập nhật: Hôm nay</p>
+                    
+                    <button class="play-all-btn">▶ PHÁT TẤT CẢ</button>
+                </div>
+
+                <div class="playlist-songs">
+                    
+                    <div class="song-row" onclick="playMusic('All Falls Down', 'Alan Walker', '../imagespop/allfallsdown.jpg', '../imagespop/All Falls Down.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">1</span>
+                            <img src="../imagespop/allfallsdown.jpg" alt="All Falls Down">
+                            <div class="song-title">
+                                <h4>All Falls Down</h4>
+                                <p>Alan Walker</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc POP</div>
+                        <div class="song-time">03:19</div>
+                    </div>
+
+                    <div class="song-row" onclick="playMusic('Baby', 'Justin Bieber', '../imagespop/baby.jpg', '../imagespop/Baby.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">2</span>
+                            <img src="../imagespop/baby.jpg" alt="Baby">
+                            <div class="song-title">
+                                <h4>Baby</h4>
+                                <p>Justin Bieber</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc POP</div>
+                        <div class="song-time">03:34</div>
+                    </div>
+
+                    <div class="song-row" onclick="playMusic('Beauty And A Beat', 'Justin Bieber', '../imagespop/beautyandabeat.jpg', '../imagespop/Beauty And A Beat.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">3</span>
+                            <img src="../imagespop/beautyandabeat.jpg" alt="Beauty">
+                            <div class="song-title">
+                                <h4>Beauty And A Beat</h4>
+                                <p>Justin Bieber</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc POP</div>
+                        <div class="song-time">03:48</div>
+                    </div>
+
+                    <div class="song-row" onclick="playMusic('Die With A Smile', 'Lady Gaga, Bruno Mars', '../imagespop/diewithasmile.jpg', '../imagespop/Die With A Smile.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">4</span>
+                            <img src="../imagespop/diewithasmile.jpg" alt="Die With A Smile">
+                            <div class="song-title">
+                                <h4>Die With A Smile</h4>
+                                <p>Lady Gaga, Bruno Mars</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc POP</div>
+                        <div class="song-time">04:11</div>
+                    </div>
+
+                    <div class="song-row" onclick="playMusic('Faded', 'Alan Walker', '../imagespop/faded.jpg', '../imagespop/Faded.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">5</span>
+                            <img src="../imagespop/faded.jpg" alt="Faded">
+                            <div class="song-title">
+                                <h4>Faded</h4>
+                                <p>Alan Walker</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc POP</div>
+                        <div class="song-time">03:32</div>
+                    </div>
+
+                    <div class="song-row" onclick="playMusic('Shape Of You', 'Ed Sheeran', '../imagespop/shapeofyou.jpg', '../imagespop/Shape Of You.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">6</span>
+                            <img src="../imagespop/shapeofyou.jpg" alt="Shape Of You">
+                            <div class="song-title">
+                                <h4>Shape Of You</h4>
+                                <p>Ed Sheeran</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc POP</div>
+                        <div class="song-time">03:53</div>
+                    </div>
+
+                    <div class="song-row" onclick="playMusic('Stay', 'The Kid LAROI, Justin Bieber', '../imagespop/stay.jpg', '../imagespop/stay.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">7</span>
+                            <img src="../imagespop/stay.jpg" alt="Stay">
+                            <div class="song-title">
+                                <h4>Stay</h4>
+                                <p>The Kid LAROI, Justin Bieber</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc POP</div>
+                        <div class="song-time">02:21</div>
+                    </div>
+                    <div class="song-row" onclick="playMusic('That Girl', 'Olly Murs', '../imagespop/thatgirl.jpg', '../imagespop/That Girl.mp3')">
+                        <div class="song-left">
+                            <span class="song-index">8</span>
+                            <img src="../imagespop/thatgirl.jpg" alt="That Girl">
+                            <div class="song-title">
+                                <h4>That Girl</h4>
+                                <p>Olly Murs</p>
+                            </div>
+                        </div>
+                        <div class="song-album">Nhạc POP</div>
+                        <div class="song-time">02:56</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Phúc Khang Music. Học phần Nhập môn Web.</p>
+    </footer>
+
+    <div id="player-bar" class="player-bar">
+        <div class="player-info">
+            <img id="player-img" src="" alt="Song Cover">
+            <div class="song-details">
+                <span class="now-playing">NOW PLAYING:</span>
+                <h4 id="player-title">Tên bài hát</h4>
+                <p id="player-artist">Tên ca sĩ</p>
+            </div>
+        </div>
+        <div class="player-controls">
+            <button class="control-btn" onclick="nextOrPrev('prev')">⏮</button>
+            <button id="play-pause-btn" onclick="togglePlay()">⏸</button>
+            <button class="control-btn" onclick="nextOrPrev('next')">⏭</button>
+        </div>
+        <div class="player-volume">
+            <span>🔊</span>
+            <input type="range" min="0" max="100" value="50">
+        </div>
+    </div>
+
+    <audio id="myAudio"></audio>
+    <script src="../java.js"></script>
+</body>
+</html>
